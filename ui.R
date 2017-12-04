@@ -2,7 +2,7 @@ data1 <- data.table::fread("data.cvs")
 library(leaflet)
 library(shiny)
 
-country <- unique(data1$country_txt)
+
 ui <- fluidPage(
   titlePanel("Terrorism Map"),
   sidebarPanel(
@@ -10,11 +10,12 @@ ui <- fluidPage(
                 label = "Choose a country:",
                 choices = unique(data1$country_txt)),
     
-    selectInput(inputId = "year",
+    selectInput(inputId = "yaer",
                 label = "Choose a year:",
                 choices = unique(data1$iyear)),
-    radioButtons("country", label = "Country",
-               choices = country,
+    radioButtons(inputId = "country",
+                 label = "Country:",
+               choices = unique(data1$country_txt),
                selected = 'United States')),
   mainPanel(
     textOutput("summary1"),
