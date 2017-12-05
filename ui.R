@@ -12,16 +12,12 @@ ui <- fluidPage(
     
     selectInput(inputId = "yaer",
                 label = "Choose a year:",
-                choices = unique(data1$iyear)),
-    radioButtons(inputId = "country",
-                 label = "Country:",
-               choices = unique(data1$country_txt),
-               selected = 'United States')),
+                choices = unique(data1$iyear))),
+
   mainPanel(
     textOutput("summary1"),
     leafletOutput(outputId = "distPlot1"), 
     dataTableOutput(outputId = "distPlot2"),
-    plotOutput('linechart')
+    plotOutput("linechart")
   )
-  
 )  
