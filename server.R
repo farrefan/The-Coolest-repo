@@ -23,7 +23,7 @@ server <- function(input, output) {
   
   output$distPlot2 <- renderDataTable({
     dm <- data1 %>% filter(iyear == input$yaer, country_txt == input$country)
-    data2 <- dm %>% select(iyear,imonth,iday,attacktype1_txt,targtype1_txt,weaptype1_txt,city)
+    data2 <- dm %>% select(iyear, imonth, iday, attacktype1_txt, targtype1_txt, weaptype1_txt,city)
     data2
   },
     options = list(lengthMenu = c(5, 10, 33), pageLength = 5))
@@ -32,7 +32,7 @@ server <- function(input, output) {
     specific_country <- data1 %>% filter(country_txt == input$country) %>%
       group_by(iyear) %>% dplyr::summarise(number = n())
     ggplot(data = specific_country) + 
-      geom_point(mapping = aes(x = iyear, y = number))+ 
+      geom_point(mapping = aes(x = iyear, y = number)) + 
       geom_smooth(mapping = aes(x = iyear, y = number)) + 
       labs(x = "Years", y = "Frequence")
   })
