@@ -13,3 +13,7 @@ The majority audiences of this project are the authorities. In particular, we wa
 In this project, we decided to use shiny as our tool. The location of all the terrorism cases will be shown as a pin point one the map. By zooming in and out the scale of map, it could show the location from a nation to a specific street or neighborhood of the selected case. By placing the mouse onto the selected pin point, an information box with detailed information will be shown which can give audiences a better idea of which kind of terrorism attack, what weapons are used, who are the target groups, and motives of this terrorist. Base on how the pin points spread on the map and density, it is easier for audiences, to be specific, the authorities, to make a quick and accurate decision on which part needs to strengthen their security protection.
 
 By choosing a country in the first selecting box,the plot will show the frequency of terrorism events over years in a specific country . Then the user can feel  free to choose one of the  years in the second box.As a result,the time ,location , attack type,weapon type and target type of each event will be displayed in a table format.
+
+## Where To Find Our APP
+
+WebURL:https://farre.shinyapps.io/the-coolest-repo/
