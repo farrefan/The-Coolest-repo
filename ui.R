@@ -1,6 +1,7 @@
 data1 <- data.table::fread("data.cvs")
 library(leaflet)
 library(shiny)
+
 names<-colnames(data1)
 names[2]<-"year"
 names[3]<-"month"
@@ -21,10 +22,11 @@ ui <- fluidPage(
     
     selectInput(inputId = "yaer",
                 label = "Choose a year:",
-                choices = unique(data1$year))),
+                choices = unique(data1$year)),
+    
+    textOutput(outputId = "summary")),
   
   mainPanel(
-    textOutput("summary1"),
     leafletOutput(outputId = "distPlot1"), 
     dataTableOutput(outputId = "distPlot2"),
     plotOutput("linechart")

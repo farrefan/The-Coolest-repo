@@ -5,6 +5,6 @@ account: farre
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 244333
-bundleId: 1115508
+bundleId: 1117672
 url: https://farre.shinyapps.io/the-coolest-repo/
-when: 1512441321.66064
+when: 1512518740.23402

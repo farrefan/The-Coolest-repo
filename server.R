@@ -13,7 +13,17 @@ names[11]<-"attack_type"
 names[12]<-"target_type"
 names[14]<-"weapon_type"
 colnames(data1)<-names
+
 server <- function(input, output) {
+  
+  output$summary <- renderText({
+    print("Change country and year bar to
+          review the geo-distribution of terrorism 
+          of a country in that year.
+          Click pinpoint for more information about one terrorism activity.
+          The below charts shows the change of the number of
+          terrorism activity for a country since 1970.")
+  })
     
   output$distPlot1 <- renderLeaflet({
     dm <- data1 %>% filter(year == input$yaer, country == input$country)
